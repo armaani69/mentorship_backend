@@ -1,5 +1,4 @@
-import * as dotenv from 'dotenv'
-dotenv.config()
+import * as dotenv from 'dotenv';
+dotenv.config();
 
-
-export const PORT_ADDRESS = process.env.PORT
+export const PORT_ADDRESS = process.env.PORT;

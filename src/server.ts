@@ -1,4 +1,4 @@
-import * as Koa from 'koa';
+import Koa, { Context } from 'koa';
 import * as Router from 'koa-router';
 
 import * as Logger from 'koa-logger';
@@ -9,11 +9,10 @@ import { PORT_ADDRESS } from '../config';
 const server = new Koa();
 const router = new Router();
 
-const PORT = PORT_ADDRESS;
+const PORT: string = PORT_ADDRESS;
 
-router.get('/', async (ctx, next) => {
-  ctx.body = { message: 'Hello World' };
-
+router.get('/', async (ctx: Context, next) => {
+  ctx.body = { message: 'Server successful' };
   await next();
 });
 
