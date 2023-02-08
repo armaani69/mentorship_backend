@@ -1,19 +1,18 @@
-import * as Koa from "koa";
-import * as Router from "koa-router";
+import * as Koa from 'koa';
+import * as Router from 'koa-router';
 
-import * as Logger from "koa-logger";
-import * as KoaJSON from "koa-json";
+import * as Logger from 'koa-logger';
+import * as KoaJSON from 'koa-json';
 
-import { PORT_ADDRESS} from '../config'
-
+import { PORT_ADDRESS } from '../config';
 
 const server = new Koa();
 const router = new Router();
 
 const PORT = PORT_ADDRESS;
 
-router.get("/", async (ctx, next) => {
-  ctx.body = { message: "Hello World" };
+router.get('/', async (ctx, next) => {
+  ctx.body = { message: 'Hello World' };
 
   await next();
 });
